@@ -30,6 +30,7 @@ ul.tweets li article.tweet {
   background: #fff;
   border-radius: 3px;
   transform: translateZ(-100px) rotateX(50deg);
+  -webkit-transform: translateZ(-100px) rotateX(50deg);
   transition: all 0.2s linear;
 }
 ul.tweets li article.tweet aside.icon {
@@ -63,9 +64,11 @@ ul.tweets li article.tweet section .status span {
 }
 ul.tweets li article.tweet.flip {
   transform: translateZ(-100px) rotateX(0deg);
+  -webkit-transform: translateZ(-100px) rotateX(0deg);
 }
 ul.tweets li article.tweet.show {
   transform: translateZ(0px) rotateX(0deg);
+  -webkit-transform: translateZ(0px) rotateX(0deg);
 }
 @media screen and (min-width: 500px) {
   ul.tweets {
