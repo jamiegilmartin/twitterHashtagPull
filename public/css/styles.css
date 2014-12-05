@@ -30,7 +30,7 @@ ul.tweets li article.tweet {
   background: #fff;
   border-radius: 3px;
   transform: translateZ(-100px) rotateX(50deg);
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
 }
 ul.tweets li article.tweet aside.icon {
   float: left;
@@ -61,6 +61,35 @@ ul.tweets li article.tweet section header .timeSince {
 ul.tweets li article.tweet section .status span {
   color: #00a5df;
 }
+ul.tweets li article.tweet.flip {
+  transform: translateZ(-100px) rotateX(0deg);
+}
 ul.tweets li article.tweet.show {
-  transform: rotateX(0deg);
+  transform: translateZ(0px) rotateX(0deg);
+}
+@media screen and (min-width: 500px) {
+  ul.tweets {
+    font-size: 1.5em;
+  }
+  ul.tweets li article.tweet section {
+    width: 80%;
+  }
+  ul.tweets li article.tweet section header h1 {
+    padding-bottom: 5px;
+  }
+  ul.tweets li article.tweet section header h2 {
+    padding-bottom: 5px;
+  }
+  ul.tweets li article.tweet section .status {
+    font-size: 1.2em;
+    line-height: 1.2em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  ul.tweets {
+    font-size: 2em;
+  }
+  ul.tweets li article.tweet section {
+    width: 90%;
+  }
 }

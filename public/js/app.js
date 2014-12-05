@@ -60,7 +60,7 @@ App.directive('tweet', function(){
 
             //flip
             setTimeout(function(){
-                element.find('.tweet').addClass('show');
+                element.find('.tweet').addClass('flip');
             },element.offset().top*2);
             
         }
