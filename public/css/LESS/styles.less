@@ -1,0 +1,85 @@
+@import url("./reset.css");
+
+
+@light_grey : #898989;
+@dark_grey : #47494d;
+@blue : #00a5df;
+
+
+body {
+    font-size: 62.5%;
+    font-family: museo,Helvetica,Arial,sans-serif;
+    font-weight: 300;
+    color:@dark_grey;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+
+ul.tweets {
+    background: #f7f7f7;
+    padding:1em;
+    li {
+        perspective: 1000px;
+        perspective-origin: 50% 50%;
+        transform-style: preserve-3d;
+        -webkit-perspective-origin: 50% 50%;
+        -webkit-transform-style: preserve-3d;
+        padding:0.5em;
+        margin:0.2em 0;
+        border:1px solid rgba(100,100,100,0.1);
+
+        article.tweet {
+            padding:1em;
+            box-sizing: border-box;
+            margin: 0 auto;
+            overflow:hidden;
+            border:0.2em solid @light_grey;
+            cursor:pointer;
+            background: #fff;
+            border-radius: 3px;
+
+            transform: translateZ(-100px) rotateX(50deg);
+            transition: all 0.5s linear;
+
+
+            aside.icon {
+                float:left;
+                padding-right: 1em;
+                .wrap {
+                    border-radius:3px;
+                    overflow: hidden;
+                }
+            }
+
+            section {
+                float:left;
+                width: 75%;
+                header {
+                    overflow:hidden;
+                    h1 {
+                        font-size:1.3em;
+                        color:@blue;
+                    }
+                    h2 {
+                        font-size:1.1em;
+                        color:@light_grey;
+                        
+                    }
+                    .timeSince {
+                        float:right;
+                    }
+
+                }
+                .status {
+                    span {
+                        color:@blue;
+                    }
+                }
+            }
+
+        }
+        article.tweet.show {
+            transform: rotateX(0deg);
+        }
+    }
+}

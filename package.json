@@ -1,0 +1,12 @@
+{
+  "name": "thp",
+  "description": "twitter hash tag puller",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "^4.10.4",
+    "express-handlebars": "*",
+    "less": "^2.1.1",
+    "twitter": "*"
+  }
+}

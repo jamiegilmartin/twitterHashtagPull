@@ -1,0 +1,20 @@
+<article class="tweet" 
+    ng-class="{show: hover}" 
+    ng-mouseenter="hover = true"
+    ng-mouseleave="hover = false"
+    >
+    <aside class="icon">
+        <div class="wrap">
+            <img src="{{ tweet.user.profile_image_url }}">
+        </div>
+    </aside>
+    <section>
+        <header>
+            <p class="timeSince">{{ timeSince }}</p>
+            <h1>{{ tweet.user.name }}</h1>
+            <h2>@{{ tweet.user.screen_name }}</h2>
+        </header>
+        <div class="status" ng-bind-html="status">
+        </div>   
+    </section>
+</article>
